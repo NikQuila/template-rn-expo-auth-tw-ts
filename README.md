@@ -7,12 +7,12 @@ Estos son los pasos para configurar el proyecto en tu sistema local:
 1. Clonar el repositorio
    Primero, clona este repositorio en tu sistema local utilizando el siguiente comando:
 
-git clone https://github.com/NikQuila/template-react-native-auth-ts.git
+`git clone https://github.com/NikQuila/template-react-native-auth-ts.git`
 
 2. Instalar las dependencias
    En la carpeta del proyecto, ejecuta el siguiente comando para instalar todas las dependencias necesarias:
 
-npm install
+`npm install`
 
 3. Crear un proyecto de Firebase
    Si aún no lo has hecho, necesitas crear un proyecto en Firebase. Para hacerlo, sigue las instrucciones en la documentación oficial de Firebase.
@@ -26,12 +26,13 @@ FIREBASE_PROJECT_ID=Tu ID de proyecto
 FIREBASE_STORAGE_BUCKET=Tu bucket de almacenamiento
 FIREBASE_MESSAGING_SENDER_ID=Tu ID de remitente de mensajes
 FIREBASE_APP_ID=Tu ID de aplicación
+
 Estos valores los encontrarás en la configuración de tu proyecto de Firebase.
 
 5. Correr la aplicación
    Una vez que hayas realizado todos los pasos anteriores, ya estás listo para correr la aplicación. Desde la carpeta del proyecto, puedes correr la aplicación con el siguiente comando:
 
-npx expo start
+`npx expo start`
 
 Características
 Registro de usuarios
