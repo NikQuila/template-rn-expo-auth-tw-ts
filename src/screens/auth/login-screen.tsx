@@ -1,8 +1,7 @@
 // react
 import { useState } from 'react';
-// redux
-import { useDispatch } from 'react-redux';
-import { setCurrentUser } from '../../store/user/user.action';
+// zustand
+import { useUserStore } from '../../store/useUserStore';
 // firebase
 import {
   logInWithEmailAndPassword,
@@ -28,21 +27,20 @@ import colors from '../../utils/colors';
 interface props extends StackScreenProps<AuthScreens> {}
 
 const LoginScreen = ({ navigation }: props) => {
+  const { user, setUser } = useUserStore();
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
-
-  const dispatch = useDispatch();
 
   const handleLogin = async () => {
     setIsLoading(true);
     const result = await logInWithEmailAndPassword(email, password);
     if (result) {
       const user = await getUserById(result.user.uid);
-      dispatch(setCurrentUser(user));
+      setUser(user);
     } else {
-      dispatch(setCurrentUser(null));
+      setUser(null);
       setError('Email o contraseña incorrectos');
     }
     setIsLoading(false);

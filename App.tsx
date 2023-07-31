@@ -1,8 +1,6 @@
 import { useFonts } from 'expo-font';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { Provider } from 'react-redux';
-import store from './src/store/store';
 import NavigationController from './src/navigation/navigation-controller';
 
 export default function App() {
@@ -15,9 +13,5 @@ export default function App() {
     return null;
   }
 
-  return (
-    <Provider store={store}>
-      <NavigationController />
-    </Provider>
-  );
+  return <NavigationController />;
 }
