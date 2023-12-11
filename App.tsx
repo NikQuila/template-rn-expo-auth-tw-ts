@@ -2,6 +2,8 @@ import { useFonts } from 'expo-font';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import NavigationController from './src/navigation/navigation-controller';
+import 'react-native-reanimated';
+import 'react-native-gesture-handler';
 
 export default function App() {
   const [fontsLoaded] = useFonts({

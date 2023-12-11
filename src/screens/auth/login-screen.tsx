@@ -59,7 +59,9 @@ const LoginScreen = ({ navigation }: props) => {
             style={{ height: 150, width: 200 }}
             resizeMode='contain'
           />
-          <Text style={styles.subTitle}>By NikQuila</Text>
+          <Text className={'text-green-400'} style={styles.subTitle}>
+            By NikQuila
+          </Text>
         </View>
         <View style={styles.form}>
           <TextInput

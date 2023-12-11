@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 const HomeScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>Home Screen</Text>
+      <Text className={''}>Home Screen</Text>
       <StatusBar style='auto' />
     </View>
   );
